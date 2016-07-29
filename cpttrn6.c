@@ -25,12 +25,15 @@ int main() {
 						printf("+");
 						vcount = 0;
 					}
-					hcount = 0;
 				}
 				vcount += 1;
 			}
 			printf("\n");
-			hcount += 1;
+			if(hcount > height)
+				hcount = 1;
+			else
+				hcount += 1;
+			vcount = 1;
 		}
 		printf("\n");
 	}
