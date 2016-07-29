@@ -36,6 +36,8 @@ int main() {
 			vcount = 1;
 		}
 		printf("\n");
+		hcount = 1;
+		vcount = 1;
 	}
 	return 0;
 }
