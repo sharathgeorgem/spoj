@@ -3,6 +3,6 @@ int main() {
 	int test;
 	scanf("%d",&test);
 	while(test--) {
-		
+		/*To be solved*/
 	}
 }
