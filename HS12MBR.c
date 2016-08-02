@@ -43,8 +43,22 @@ int main() {
 				if((ycircle + radius) > y2rect)
 					y2rect = ycircle + radius;
 			} else {
-				
-
+				scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
+				if(flag == 0) {
+					x1rect = x1;
+					y1rect = y1;
+					x2rect = x2;
+					y2rect = y2;
+					flag = 1;
+				}
+				if(x1 < x1rect)
+					x1rect = x1;
+				if(y1 < y1rect)
+					y1rect = y1;
+				if(x2 > x2rect)
+					x2rect = x2;
+				if(y2 > y2rect)
+					y2rect = y2;
 			}
 		}
 		printf("%d %d %d %d\n", x1rect, y1rect, x2rect, y2rect);
