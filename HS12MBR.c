@@ -1,9 +1,12 @@
 #include<stdio.h>
 int main() {
-	int test;
+	int test, n;
+	char figure;
 	scanf("%d",&test);
 	while(test--) {
-		/*To be solved*/
-		/*Really really soon*/
+		scanf("%d",&n)
+		while(n--) {
+
+		}
 	}
 }
