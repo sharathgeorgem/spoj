@@ -2,13 +2,13 @@
 int main() {
 	int i, test, n, xpoint, ypoint, xcircle, ycircle, radius, x1, y1, x2, y2, flag=0;
 	int  x1rect=0, y1rect=0, x2rect=0, y2rect=0;
-	char figure;
+	char figure[2];
 	scanf("%d",&test);
 	while(test--) {
 		scanf("%d",&n);
 		while(n--) {
-			scanf("%c",&figure);
-			if(figure == 'p') {
+			scanf("%s",figure);
+			if(figure[0] == 'p') {
 				scanf("%d%d", &xpoint, &ypoint);
 				if(flag == 0) {
 					x1rect = xpoint;
@@ -25,6 +25,11 @@ int main() {
 					x2rect = xpoint;
 				if(ypoint > y2rect)
 					y2rect = ypoint;
+			} else if(figure[0] == 'c') {
+				scanf("%d%d%d", &xcircle, &ycircle, &radius);
+				if(flag == 0) {
+					
+				}
 			}
 		}
 		printf("%d %d %d %d\n", x1rect, y1rect, x2rect, y2rect);
