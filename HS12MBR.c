@@ -28,8 +28,23 @@ int main() {
 			} else if(figure[0] == 'c') {
 				scanf("%d%d%d", &xcircle, &ycircle, &radius);
 				if(flag == 0) {
-					
+					x1rect = xcircle - radius;
+					y1rect = ycircle - radius;
+					x2rect = xcircle + radius;
+					y2rect = ycircle + radius;
+					flag = 1;
 				}
+				if((xcircle - radius) < x1rect)
+					x1rect = xcircle - radius;
+				if((ycircle - radius) < y1rect)
+					y1rect = ycircle - radius;
+				if((xcircle + radius) > x2rect)
+					x2rect = xcircle + radius;
+				if((ycircle + radius) > y2rect)
+					y2rect = ycircle + radius;
+			} else {
+				
+
 			}
 		}
 		printf("%d %d %d %d\n", x1rect, y1rect, x2rect, y2rect);
