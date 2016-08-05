@@ -42,7 +42,7 @@ int main() {
 					x2rect = xcircle + radius;
 				if((ycircle + radius) > y2rect)
 					y2rect = ycircle + radius;
-			} else {
+			} else if(figure[0] == 'l') {
 				scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
 				if(flag == 0) {
 					x1rect = x1;
@@ -60,9 +60,13 @@ int main() {
 				if(y2 > y2rect)
 					y2rect = y2;
 			}
+			else {
+				break;
+			}
 		}
-		printf("%d %d %d %d\n", x1rect, y1rect, x2rect, y2rect);
+		printf("%d %d %d %d", x1rect, y1rect, x2rect, y2rect);
 		flag = 0;
+		printf("\n");
 	}
 	return 0;
 }
