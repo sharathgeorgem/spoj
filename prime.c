@@ -1,11 +1,15 @@
 #include<stdio.h>
+#include<math.h>
 int main() {
-	long i, m, j, n, k ,l;
-	scanf("%ld%ld", &m, &n);
-	long primes[n];
+	long i, m, j, k ,l;
+	double root, n;
+	scanf("%ld%lf", &m, &n);
+	double primes[(int)n];
 	primes[0] = 0;
 	primes[1] = 0;
-	for(i=2;i<n;i++)
+	root = sqrtf(n);
+	/*Busy*/
+	for(i=2;i<root;i++)
 		primes[i] = 1;
 	/*for(i=2; i*i<n; i++) {
 		if(primes[i]) {
@@ -22,7 +26,7 @@ int main() {
 			}
 		}
 	}*/
-	for(i=2;i<=n;i++) {
+	for(i=2;i*i<n;i++) {
 		if(primes[i])
 			printf("%ld\t",i);
 	}
