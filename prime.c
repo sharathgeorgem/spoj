@@ -7,7 +7,6 @@ int main() {
 	double primes[(int)n];
 	primes[0] = 0;
 	primes[1] = 0;
-	root = sqrtf(n);
 	/*Busy*/
 	for(i=2;i<root;i++)
 		primes[i] = 1;
@@ -26,6 +25,7 @@ int main() {
 			}
 		}
 	}*/
+	/*Time complexity issue*/
 	for(i=2;i*i<n;i++) {
 		if(primes[i])
 			printf("%ld\t",i);
